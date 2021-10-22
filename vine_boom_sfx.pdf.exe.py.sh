@@ -147,11 +147,9 @@ function s-inst {
 		echo "There are multiple packages."
 		echo "Choose a package of following:"
 		cat $ls | grep $se
-		echo "[1-$rs / name]"
-		read se
+		read -p "[name]: " se 
 	fi
 	
-	if (($se > 1))
-	then	
-		
-
+	cd repos
+	./$se.sh
+}
