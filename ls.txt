@@ -1,3 +1,0 @@
-# $ls
-mint-aliases | adds Linux Mint aliases to your .bash/zshrc
-oh-my-zsh | Oh My Zsh installer. Requires git
