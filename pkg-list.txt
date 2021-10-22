@@ -1,3 +1,0 @@
-# $pkg
-#mint-aliases
-#oh-my-zsh
