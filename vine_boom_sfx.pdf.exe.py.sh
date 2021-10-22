@@ -31,32 +31,7 @@ fi
 
 
 function update {
-#check for updates, somehow
 
-	if [ "$2" = "" ]
-	then
-		echo "provide current update file and retry"
-	else
-
-#big block so lower level
-#idk what i would need to update, but future proofing
-
-export ud=$(ls .update)
-
-
-if [ "$ud" != "" ]
-then
-	rm -rf .update
-
-fi
-
-#wget $2
-
-#time to read file
-#export upd=$(sed '1!d' ud.sh)
-
-echo "no update available"
-fi
 }
 
 
@@ -80,27 +55,46 @@ function help {
 
 
 function maininstall {
-
-echo "Finding sources"
-cd $src
-export rep=$(ls -a | grep .repo)
-ls -a | grep .repo
+	echo "Installing vine_boom_sfx"
+	echo
+	echo "But first, a few questions."
+	read -p "Install type [A uto, G uided, C ustom]: " itype
 	
-echo 
-echo "Enter file name or link"
-if [ "$rep" != "" ]
-then
-	echo "Or choose above ($src)"
-fi
+	if [ "$itype" = "a" ]
+	then
+		read -p "Checking for git (any key to pause)" -t 3 git
+		
+		if [ "$git" != "" ]
+		then
+			echo "Waiting, any key to continue"
+			read
+		fi
+		
+		#check for git
+		
+		export git=$(ls $PATH | grep git)
+		if [ "$git" = "" ]
+		then
 	
-read ch
-
-export file=$(cat $ch)
-
-if [ "$file" = "cat: $ch: No such file or directory" ]
-then
-	wget $ch
-fi
+			export git=0
+			
+			if [ "$env" = "termux" ]
+			then
+				apt install git
+			fi
+			
+			if [ "$env" = "pc" ]
+			then
+				echo "Please install git and press enter"
+				read
+			fi
+			
+		fi
+		
+		echo "Git prepared, cloning!"
+		cd ~
+		git clone https://github.com/pinktabbyhunterlargo/vine_boom_sfx.pdf.exe.py.sh/
+		mv vine_boom_sfx.pdf.exe.py.sh/ .vine/
 
 }
 
@@ -141,5 +135,5 @@ function s-inst {
 	
 	if (($se > 1))
 	then	
-		wget $(sed '$se!d' pkg-list.txt) # i assure you this was not intentional
+		wget $(sed '$se!d' pkg-list.txt)
 
