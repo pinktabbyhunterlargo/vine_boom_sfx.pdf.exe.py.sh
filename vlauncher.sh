@@ -1,4 +1,8 @@
-echo "vlauncher version 1"
+if [ "$(cat ~/.vls)" = "" ]
+then
+	echo "vlauncher version 1"
+fi
+
 if [ "$1" = "s" ]
 then
 	# setup vlauncher and vine_boom_sfx
