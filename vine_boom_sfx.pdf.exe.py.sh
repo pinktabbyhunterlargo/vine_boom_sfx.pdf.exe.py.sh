@@ -80,7 +80,7 @@ function maininstall {
 			
 			if [ "$env" = "termux" ]
 			then
-				apt install git
+				apt install git -y
 			fi
 			
 			if [ "$env" = "pc" ]
@@ -91,10 +91,28 @@ function maininstall {
 			
 		fi
 		
-		echo "Git prepared, cloning!"
+		echo "Git prepared"
 		cd ~
+		echo "Cloning repositories"
 		git clone https://github.com/pinktabbyhunterlargo/vine_boom_sfx.pdf.exe.py.sh/
 		mv vine_boom_sfx.pdf.exe.py.sh/ .vine/
+		
+		echo "Installing"
+		mkdir -p ~/.local/bin
+		cd .local/bin
+		cp ~/.vine/vlauncher.sh ~/.local/bin/
+		mv vine_boom_sfx.pdf.exe.py.sh vine_boom_sfx
+		chmod +x vine_boom_sfx
+		
+		echo "Testing"
+		vine_boom_sfx s h ~/.vine/vine_boom_sfx.pdf.exe.py.sh
+		vine_boom_sfx install test
+		vine_boom_sfx update ~/.vine/tmp/
+		vine_boom_sfx log
+		
+		
+	fi
+		
 
 }
 
