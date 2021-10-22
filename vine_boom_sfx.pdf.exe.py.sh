@@ -105,7 +105,7 @@ function maininstall {
 		chmod +x vine_boom_sfx
 		
 		echo "Testing"
-		vine_boom_sfx s h ~/.vine/vine_boom_sfx.pdf.exe.py.sh
+		vine_boom_sfx s h ~/.vine ~/.local/bin ~/.vine/vine_boom_sfx.pdf.exe.py.sh 
 		vine_boom_sfx install test
 		vine_boom_sfx update ~/.vine/tmp/
 		vine_boom_sfx log
@@ -146,12 +146,12 @@ function s-inst {
 	then
 		echo "There are multiple packages."
 		echo "Choose a package of following:"
-		cat $ls | grep -n $se
-		echo "[number or name]"
-		read mse
+		cat $ls | grep $se
+		echo "[1-$rs / name]"
+		read se
 	fi
 	
 	if (($se > 1))
 	then	
-		wget $(sed '$se!d' pkg-list.txt)
+		
 
