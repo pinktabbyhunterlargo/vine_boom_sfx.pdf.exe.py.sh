@@ -1,6 +1,6 @@
 #!/bin/bash
 export ver=1
-export os=$(awk -F= '$1=="ID" { print $2 ;}' /etc/os-release) #i got this from stackexchange, it gives the os so we can automatically install packages
+
 export src=$(pwd)
 cd ~
 export path=$(pwd)
@@ -20,6 +20,15 @@ else
 	#assume PC
 	export env="pc"
 fi
+
+if [ "$env" != "termux" ]; then
+	export os=$(awk -F= '$1=="ID" { print $2 ;}' /etc/os-release)
+fi
+
+export root=$(pwd)
+export pkgs="$(pwd)/settings/pkglist"
+export ls="$root/repos/allpkgs"
+
 
 
 # it's function time!
@@ -99,6 +108,10 @@ function maininstall {
 		cp ~/.vine/vlauncher.sh ~/.local/bin/
 		mv vine_boom_sfx.pdf.exe.py.sh vine_boom_sfx
 		chmod +x vine_boom_sfx
+		cd ~/.vine/repos
+		chmod +x *
+		cd uninstall
+		chmod +x *
 		
 		echo "Testing"
 		vine_boom_sfx s h ~/.vine ~/.local/bin ~/.vine/vine_boom_sfx.pdf.exe.py.sh 
@@ -119,7 +132,7 @@ function bomb {
 	adfds[sa[s[f[[[f[as]]]]]]
 	sdfs[[[f[s[fs]d]s]ds]]d]
 }
-if [ "$1" = "-b" ]; then
+if [ "$1" = "bomb" ]; then
 	bomb
 fi
 
@@ -145,5 +158,35 @@ function s-inst {
 	fi
 	
 	cd repos
+
+	if [ "$se" = "vine_boom_sfx" ]; then
+		maininstall
+	else
+		./$se.sh
+		echo "$se" >> ../settings/pkglist
+	fi
+
+}
+
+if [ "$1" = "install" ]; then
+	s-inst
+fi
+if [ "$1" = "search" ]; then
+	search
+fi
+
+function uninstall {
+	export se=$2
+	export rs=$(cat $pkgs | grep -c $se)
+	cat $pkgs | grep $se
+	echo "$rs results found"
+
+	if (($rs > 1)); then
+echo "Not specifc enough."
+read -p "Choose a package above: " se
+	fi
+
+	cd repos
+	cd uninstall
 	./$se.sh
 }
