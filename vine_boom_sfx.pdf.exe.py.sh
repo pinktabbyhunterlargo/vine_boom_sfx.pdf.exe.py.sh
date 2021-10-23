@@ -1,10 +1,10 @@
 #!/bin/bash
 export ver=1
-export os=$(awk -F= '$1=="ID" { print $2 ;}' /etc/os-release) #i got this from stackexchange, it gives the os so we can automatically install packages
+export os=$(awk -F= '$1=="ID_LIKE" { print $2 ;}' /etc/os-release) #i got this from stackexchange, it gives the os so we can automatically install packages
+export altos=$(awk -F= '$1=="ID" { print $2 ;}' /etc/os-release) #more janky code
 export src=$(pwd)
 cd ~
 export path=$(pwd)
-
 
 # find environment
 export un=$(uname -o)
@@ -19,18 +19,15 @@ if [ "$un" = "Android" ]; then
 else
 	#assume PC
 	export env="pc"
+	export path=$(/home/$USER/)
 fi
-
 
 # it's function time!
 #yaaaaayyyy.....
 
-
-
 function update {
 	echo "no update available"
 }
-
 
 function help {
 
@@ -66,7 +63,6 @@ function maininstall {
 		fi
 		
 		#check for git
-		
 		export git=$(ls $PATH | grep git)
 		if [ "$git" = "" ]; then
 	
@@ -77,6 +73,9 @@ function maininstall {
 			fi
 			
 			if [ "$env" = "pc" ]; then
+				if [ "$os" = "" ]; then
+					export os=$(awk -F= '$1=="ID" { print $2 ;}' /etc/os-release)
+				fi
 				if [[ "$os" = *"debian"* ]] || [[ "$os" = *"ubuntu"* ]]; then
 					sudo apt install git -y
 				fi
