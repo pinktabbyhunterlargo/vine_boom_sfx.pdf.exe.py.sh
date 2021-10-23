@@ -1,6 +1,6 @@
 #!/bin/bash
 export ver=1
-export os=$(awk -F= '$1=="ID" { print $2 ;}' /etc/os-release) #i got this from stackexchange, it gives the os so we can automatically install packages
+export os=$(awk -F= '$1=="ID_LIKE" { print $2 ;}' /etc/os-release) #i got this from stackexchange, it gives the os so we can automatically install packages
 export src=$(pwd)
 cd ~
 export path=$(pwd)
