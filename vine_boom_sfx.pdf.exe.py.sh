@@ -28,7 +28,7 @@ fi
 
 
 function update {
-
+	echo "no update available"
 }
 
 
