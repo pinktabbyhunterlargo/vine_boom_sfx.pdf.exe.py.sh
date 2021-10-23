@@ -1,7 +1,6 @@
 #!/bin/bash
 export ver=1
-
-
+export os=$(awk -F= '$1=="ID" { print $2 ;}' /etc/os-release) #i got this from stackexchange, it gives the os so we can automatically install packages
 export src=$(pwd)
 cd ~
 export path=$(pwd)
@@ -9,10 +8,8 @@ export path=$(pwd)
 
 # find environment
 export un=$(uname -o)
-if [ "$un" = "Android" ]
-then
-	if [ "$path" = "/data/data/com.termux/files/home" ]
-	then
+if [ "$un" = "Android" ]; then
+	if [ "$path" = "/data/data/com.termux/files/home" ]; then
 		#assume Termux
 		export env="termux"
 	else
@@ -60,12 +57,10 @@ function maininstall {
 	echo "But first, a few questions."
 	read -p "Install type [A uto, G uided, C ustom]: " itype
 	
-	if [ "$itype" = "a" ]
-	then
+	if [ "$itype" = "a" ]; then
 		read -p "Checking for git (any key to pause)" -t 3 git
 		
-		if [ "$git" != "" ]
-		then
+		if [ "$git" != "" ]; then
 			echo "Waiting, any key to continue"
 			read
 		fi
@@ -73,20 +68,17 @@ function maininstall {
 		#check for git
 		
 		export git=$(ls $PATH | grep git)
-		if [ "$git" = "" ]
-		then
+		if [ "$git" = "" ]; then
 	
 			export git=0
 			
-			if [ "$env" = "termux" ]
-			then
+			if [ "$env" = "termux" ]; then
 				apt install git -y
 			fi
 			
-			if [ "$env" = "pc" ]
-			then
-				echo "Please install git and press enter"
-				read
+			if [ "$env" = "pc" ]; then
+				if [[ "$os" = *"debian"* ]] || [ "$os" = "ubuntu" ]; then
+					sudo apt install git -y
 			fi
 			
 		fi
@@ -123,8 +115,7 @@ function bomb {
 	adfds[sa[s[f[[[f[as]]]]]]
 	sdfs[[[f[s[fs]d]s]ds]]d]
 }
-if [ "$1" = "-b" ]
-then
+if [ "$1" = "-b" ]; then
 	bomb
 fi
 
@@ -142,8 +133,7 @@ function search {
 function s-inst {
 	search
 	
-	if (($rs > 1))
-	then
+	if (($rs > 1)); then
 		echo "There are multiple packages."
 		echo "Choose a package of following:"
 		cat $ls | grep $se
