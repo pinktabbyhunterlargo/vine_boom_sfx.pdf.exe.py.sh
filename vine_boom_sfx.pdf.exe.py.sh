@@ -77,8 +77,12 @@ function maininstall {
 			fi
 			
 			if [ "$env" = "pc" ]; then
-				if [[ "$os" = *"debian"* ]] || [ "$os" = "ubuntu" ]; then
+				if [[ "$os" = *"debian"* ]] || [[ "$os" = *"ubuntu"* ]]; then
 					sudo apt install git -y
+				fi
+				if [ "$os" = "alpine" ]; then
+					sudo apk add git
+				fi
 			fi
 			
 		fi
