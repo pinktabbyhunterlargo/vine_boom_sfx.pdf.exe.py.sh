@@ -1,10 +1,25 @@
 # find environment
 colour="\e[1;34m"
 reset="\e[0m"
+export os=$(awk -F= '$1=="ID_LIKE" { print $2 ;}' /etc/os-release)
+export osalt=$(awk -F= '$1=="ID" { print $2 ;}' /etc/os-release)
 export un=$(uname -o)
 if [ "$un" = "Android" ]; then
 	echo -e "${colour}not supported${reset}"
 fi
-sudo apt install -y python3-pip python3-setuptools python3-wheel python3-dev pkg-config libcairo2-dev gtk-update-icon-cache desktop-file-utils xdg-utils libgirepository1.0-dev gir1.2-gtk-3.0
+#dependencies
+if [[ "$os" = *"ubuntu"* ]] || [[ "$osalt" = *"ubuntu"* ]]; then
+	sudo apt install -y python3-pip python3-setuptools python3-wheel python3-dev pkg-config libcairo2-dev gtk-update-icon-cache desktop-file-utils xdg-utils libgirepository1.0-dev gir1.2-gtk-3.0
+	echo -e "${colour}you are on your own to install a latest wine version, for now anyway${reset}"
+elif [[ "$os" = *"arch"* ]] || [[ "$osalt" = *"arch"* ]]; then
+	sudo pacman -S wine git python-pip cairo gtk3 gobject-introspection desktop-file-utils xdg-utils xdg-user-dirs gtk-update-icon-cache shared-mime-info lib32-gnutls lib32-openssl lib32-pipewire lib32-libpulse lib32-alsa-lib lib32-alsa-plugins
+elif [[ "$osalt" = *"solus"* ]]; then
+	sudo eopkg it -c system.devel
+	sudo eopkg install wine wine-32bit git python3-devel libcairo-devel
+elif [[ "$os" = *"rhel"* ]] || [[ "$osalt" = *"fedora"* ]]; then
+	sudo dnf install git python3-devel python3-pip cairo-devel gobject-introspection-devel cairo-gobject-devel dbus-glib-devel make wine xdg-utils
+fi
+
+#actually installing now
 git clone https://gitlab.com/brinkervii/grapejuice.git ~/.vine/tmp/grapejuice
 python3 ~/.vine/tmp/grapejuice/install.py
