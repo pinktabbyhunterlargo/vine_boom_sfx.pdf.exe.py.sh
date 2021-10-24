@@ -104,11 +104,12 @@ function maininstall {
 		
 		echo "Installing"
 		mkdir -p ~/.local/bin
-		cd .local/bin
+		cd ~/.local/bin
 		cp ~/.vine/vlauncher.sh ~/.local/bin/
-		mv vine_boom_sfx.pdf.exe.py.sh vine_boom_sfx
+		mv vlauncher.sh vine_boom_sfx
 		chmod +x vine_boom_sfx
 		cd ~/.vine/repos
+		chmod +x ~/.vine/vine_boom_sfx.pdf.exe.py.sh
 		chmod +x *
 		cd uninstall
 		chmod +x *
@@ -148,9 +149,15 @@ function search {
 
 
 function s-inst {
+
+	if [ "$1" = "vine_boom_sfx" ]; then
+		maininstall
+	else
+		echo "$1 $2"
+
 	search
 	
-	if (($rs > 1)); then
+	if (( $rs > 1 )); then
 		echo "There are multiple packages."
 		echo "Choose a package of following:"
 		cat $ls | grep $se
@@ -159,20 +166,21 @@ function s-inst {
 	
 	cd repos
 
-	if [ "$se" = "vine_boom_sfx" ]; then
-		maininstall
-	else
-		./$se.sh
-		echo "$se" >> ../settings/pkglist
+	./$se.sh
+	echo "$se" >> ../settings/pkglist
+
 	fi
 
 }
 
 if [ "$1" = "install" ]; then
-	s-inst
+	s-inst $2
 fi
 if [ "$1" = "search" ]; then
-	search
+	search $2
+fi
+if [ "$1" = "uninstall" ]; then
+	uninstall $2
 fi
 
 function uninstall {

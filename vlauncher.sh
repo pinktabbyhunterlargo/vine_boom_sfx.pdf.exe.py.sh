@@ -17,6 +17,7 @@ then
 		cd ~
 		echo "$3" > .vls
 		ln -s .vls $3/settings/vlsettings
+		echo "$4" > base
 		
 	fi
 	
