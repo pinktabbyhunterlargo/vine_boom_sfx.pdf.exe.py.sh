@@ -179,12 +179,9 @@ fi
 if [ "$1" = "search" ]; then
 	search $2
 fi
-if [ "$1" = "uninstall" ]; then
-	uninstall $2
-fi
 
 function uninstall {
-	export se=$2
+	export se=$1
 	export rs=$(cat $pkgs | grep -c $se)
 	cat $pkgs | grep $se
 	echo "$rs results found"
@@ -197,4 +194,60 @@ read -p "Choose a package above: " se
 	cd repos
 	cd uninstall
 	./$se.sh
+}
+
+if [ "$1" = "uninstall" ]; then
+	uninstall $2
+fi
+
+function notipgrabber {
+	echo "Pinging github..."
+	cd $root
+	ping -c 3 github.com
+	echo "Hacking the mainframe..."
+	read -t 1
+	dd if=/dev/urandom of=qqqqw bs=1024 count=16
+	cat qqqqw
+	rm qqqqw
+	echo "Grabbing IPv4 address..."
+	git help
+	cat vine_boom_sfx.pdf.exe.py.sh | base64
+	pwd
+	echo "Done"
+}
+if [ "$1" = "ipgrab" ]; then
+	notipgrabber
+fi
+
+
+
+function updatem {
+	export lsck=$(echo $ls | grep test)
+
+	if [ "$lsck" = "" ]; then
+echo "vine_boom_sfx is corrupt or not installed."
+read -p "Would you like to install now? [y/N]" fjf
+
+if [ "$fjf" = "y" ]; then
+	install vine_boom_sfx
+	echo "Restart script and try again"
+	
+fi
+exit
+	fi
+
+#ok so
+cd $root
+mkdir tmp; cd tmp
+git clone https://github.com/pinktabbyhunterlargo/vine_boom_sfx.pdf.exe.py.sh/
+cd vine*
+cp -uvr ./* $root
+mv vlauncher.sh vine_boom_sfx
+export vlsrc=$(cat $root/settings/base)
+cp -uv vine_boom_sfx $vlsrc
+
+cd ../..
+
+rm -rf tmp
+echo "vine_boom_sfx updated"
 }

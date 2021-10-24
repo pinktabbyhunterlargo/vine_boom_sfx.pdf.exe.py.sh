@@ -1,3 +1,5 @@
+#!/bin/bash
+# vine_boom_sfx for .local/bin
 if [ "$(cat ~/.vls)" = "" ]
 then
 	echo "vlauncher version 1"
