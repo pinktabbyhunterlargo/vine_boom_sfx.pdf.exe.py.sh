@@ -32,9 +32,10 @@ if [ "$env" != "termux" ]; then
 	export osl=$(awk -F= '$1=="ID_LIKE" { print $2 ;}' /etc/os-release)
 fi
 
-export root=$(pwd)
+export root=$(cat .vls)
 export pkgs="$(pwd)/settings/pkglist"
 export ls="$root/repos/allpkgs"
+cd $root
 
 
 
@@ -114,7 +115,8 @@ function maininstall {
 		cd ~
 		echo "Cloning repositories"
 		git clone https://github.com/pinktabbyhunterlargo/vine_boom_sfx.pdf.exe.py.sh/
-		mv vine_boom_sfx.pdf.exe.py.sh/ .vine/
+		mkdir -p .local/share/
+		mv vine_boom_sfx.pdf.exe.py.sh/ .local/share/vine
 		
 		echo "Installing"
 		mkdir -p ~/.local/bin
@@ -129,9 +131,9 @@ function maininstall {
 		chmod +x *
 		
 		echo "Testing"
-		vine_boom_sfx s h ~/.vine ~/.local/bin ~/.vine/vine_boom_sfx.pdf.exe.py.sh 
+		vine_boom_sfx s h ~/.local/share/vine ~/.local/bin ~/.local/share/vine/vine_boom_sfx.pdf.exe.py.sh 
 		vine_boom_sfx install test
-		vine_boom_sfx update ~/.vine/tmp/
+		vine_boom_sfx update ~/.local/share/vine/tmp/
 		vine_boom_sfx log
 		
 		
