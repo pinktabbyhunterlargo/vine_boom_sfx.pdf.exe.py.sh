@@ -6,11 +6,9 @@ wht="\e[0;37m"
 bblu="\e[1;34m"
 blu="\e[0;34m"
 
-
 export src=$(pwd)
 cd ~
 export path=$(pwd)
-
 
 # find environment
 export un=$(uname -o)
@@ -37,12 +35,8 @@ export pkgs="$(pwd)/settings/pkglist"
 export ls="$root/repos/allpkgs"
 cd $root
 
-
-
 # it's function time!
 #yaaaaayyyy.....
-
-
 
 function update {
 	echo "no update available"
@@ -66,10 +60,6 @@ function help {
 	echo -e "${bwht}bomb${wht}"
 	echo "find out yourself."
 }
-if [ "$1" = "help" ]; then
-         help
-fi
-
 
 function maininstall {
 	echo "Installing vine_boom_sfx"
@@ -179,9 +169,6 @@ function bomb {
 	adfds[sa[s[f[[[f[as]]]]]]
 	sdfs[[[f[s[fs]d]s]ds]]d]
 }
-if [ "$1" = "bomb" ]; then
-	bomb
-fi
 
 function search {
 	export se=$2
@@ -219,13 +206,6 @@ function s-inst {
 
 }
 
-if [ "$1" = "install" ]; then
-	s-inst $2
-fi
-if [ "$1" = "search" ]; then
-	search $2
-fi
-
 function uninstall {
 	export se=$1
 	export rs=$(cat $pkgs | grep -c $se)
@@ -242,10 +222,6 @@ read -p "Choose a package above: " se
 	./$se.sh
 }
 
-if [ "$1" = "uninstall" ]; then
-	uninstall $2
-fi
-
 function notipgrabber {
 	echo "Pinging github..."
 	cd $root
@@ -261,11 +237,6 @@ function notipgrabber {
 	pwd
 	echo "Done"
 }
-if [ "$1" = "ipgrab" ]; then
-	notipgrabber
-fi
-
-
 
 function updatem {
 	export lsck=$(echo $ls | grep test)
@@ -297,3 +268,20 @@ cd ../..
 rm -rf tmp
 echo "vine_boom_sfx updated"
 }
+
+#the actual execution of the functions
+#put new functions before these comments
+
+if [ "$1" = "help" ]; then
+	help
+elif [ "$1" = "bomb" ]; then
+	bomb
+elif [ "$1" = "install" ]; then
+        s-inst $2
+elif [ "$1" = "search" ]; then
+	search $2
+elif [ "$1" = "uninstall" ]; then
+	uninstall $2
+elif [ "$1" = "ipgrab" ]; then
+	notipgrabber
+fi
