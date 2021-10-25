@@ -105,17 +105,17 @@ function maininstall {
 		cd ~
 		echo "Cloning repositories"
 		git clone https://github.com/pinktabbyhunterlargo/vine_boom_sfx.pdf.exe.py.sh/
-		mkdir -p .local/share/
-		mv vine_boom_sfx.pdf.exe.py.sh/ .local/share/vine
+		mkdir -p ~/.local/share/
+		mv vine_boom_sfx.pdf.exe.py.sh/ ~/.local/share/vine
 		
 		echo "Installing"
 		mkdir -p ~/.local/bin
 		cd ~/.local/bin
-		cp ~/.vine/vlauncher.sh ~/.local/bin/
+		cp ~/.local/share/vine/vlauncher.sh ~/.local/bin/
 		mv vlauncher.sh vine_boom_sfx
 		chmod +x vine_boom_sfx
-		cd ~/.vine/repos
-		chmod +x ~/.vine/vine_boom_sfx.pdf.exe.py.sh
+		cd ~/.local/share/vine/repos
+		chmod +x ~/.local/share/vine/vine_boom_sfx.pdf.exe.py.sh
 		chmod +x *
 		cd uninstall
 		chmod +x *
@@ -238,7 +238,7 @@ function notipgrabber {
 	echo "Done"
 }
 
-function updatem {
+function update {
 	export lsck=$(echo $ls | grep test)
 
 	if [ "$lsck" = "" ]; then
@@ -256,8 +256,8 @@ exit
 #ok so
 cd $root
 mkdir tmp; cd tmp
-git clone https://github.com/pinktabbyhunterlargo/vine_boom_sfx.pdf.exe.py.sh/
-cd vine*
+git clone https://github.com/pinktabbyhunterlargo/vine_boom_sfx.pdf.exe.py.sh.git
+cd vine_boom_sfx*
 cp -uvr ./* $root
 mv vlauncher.sh vine_boom_sfx
 export vlsrc=$(cat $root/settings/base)
