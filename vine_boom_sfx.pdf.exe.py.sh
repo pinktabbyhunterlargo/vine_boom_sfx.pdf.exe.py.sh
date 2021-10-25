@@ -78,11 +78,11 @@ function maininstall {
 	read -p "Install type [A uto, G uided, C ustom]: " itype
 	
 	if [ "$itype" = "a" ]; then
-		read -p "Checking for git (any key to pause)" -t 3 git
+		read -p "Checking for git (any key to pause)" -t 3 git -n 1
 		
 		if [ "$git" != "" ]; then
 			echo "Waiting, any key to continue"
-			read
+			read -n 1
 		fi
 		
 		#check for git
@@ -137,7 +137,37 @@ function maininstall {
 		vine_boom_sfx log
 		
 		
+	elif [ "$itype" = "g" ]; then
+		read -p "Should git be installed/updated? [y/n]" -n 1 git
+		
+		
+		if [ "$git" = "y" ]; then
+		
+			#ctrl c ctrl v time
+			if [ "$env" = "termux" ]; then
+				apt install git -y
+			fi
+			
+			if [ "$env" = "pc" ]; then
+				echo -e "${blu}installing git, password prompt incoming${wht}"
+				if [[ "$os" = *"debian"* ]] || [[ "$os" = *"ubuntu"* ]] || [[ "$osl" = *"debian"* ]] || [[ "$osl" = *"ubuntu"* ]]; then
+					sudo apt install git -y
+				fi
+				if [ "$os" = "alpine" ]; then
+					sudo apk add git
+				fi
+				if [[ "$os" = *"arch"* ]] || [[ "$osl" = *"arch"* ]]; then
+					sudo pacman -S git
+				fi
+			fi
+			
+			#how badly will this work
+			#hopefully not too badly
+		fi
+		
+		echo "i'll do this later"
 	fi
+		
 		
 
 }
