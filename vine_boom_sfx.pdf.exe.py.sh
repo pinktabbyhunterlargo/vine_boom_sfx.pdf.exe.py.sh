@@ -47,6 +47,8 @@ function help {
 
 	echo -e "${bwht}vine_boom_sfx.pdf.exe.py.sh${wht}"
 	echo
+	echo "to get started, install vine_boom_sfx by doing ${blu}./vine_boom_sfx.pdf.exe.py.sh install vine_boom_sfx${wht}"
+	echo
 	echo "-h, --help, help"
 	echo "generic help dialog"
 	echo
