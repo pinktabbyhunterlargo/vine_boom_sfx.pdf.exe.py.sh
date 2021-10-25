@@ -33,5 +33,5 @@ fi
 
 #actually installing now
 echo -e "${colour}installing grapejuice...${reset}"
-git clone https://gitlab.com/brinkervii/grapejuice.git ~/.vine/tmp/grapejuice
+git clone https://gitlab.com/brinkervii/grapejuice.git ~/.local/share/vine/tmp/grapejuice
 python3 ~/.vine/tmp/grapejuice/install.py

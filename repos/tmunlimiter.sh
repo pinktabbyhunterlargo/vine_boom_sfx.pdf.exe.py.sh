@@ -1,10 +1,12 @@
-echo "Making temp directory (~/Unlimiter)"
+c="\e[1;34m"
+n="\e[0;37m"
+echo "${c}Making temp directory (~/.local/share/vine/Unlimiter)"
 
-cd ~
+cd ~/.local/share/vine
 mkdir Unlimiter
 cd Unlimiter
 
-echo "Downloading files"
+echo "Downloading files${n}"
 
 mkdir main && cd main
 wget https://unlimiter.net/download
@@ -13,7 +15,7 @@ cd ..
 wget https://www.dropbox.com/s/bqocq0lonw5lw9j/TmForever.exe?dl=1
 mv TmForever.exe?dl=1 TmForever.exe
 
-echo "Installing"
+echo "${c}Installing"
 echo "Nations or United (1/2 or n/u)"
 read -n 1 game
 
@@ -33,7 +35,7 @@ then
 else
 	cd "~/.steam/steam/steamapps/common/TrackMania Nations Forever"
 fi
-cp ~/Unlimiter/main/Main\ Content/* ./
+cp ~/.local/share/vine/Unlimiter/main/Main\ Content/* ./
 echo "Keep original TmForever? (y/n)"
 read -n 1 keep
 
@@ -42,7 +44,7 @@ then
 	echo "Copying to ~"
 	cp TmForever.exe ~
 fi
-cp ~/Unlimiter/TmForever.exe ./
+cp ~/.local/share/vine/Unlimiter/TmForever.exe ./
 
 if [ "$game" = "2" ]
 then
@@ -52,7 +54,4 @@ else
 	cd "~/.steam/steam/steamapps/compatdata/11020/pfx/drive_c/users/steamuser/My Documents/TrackMania/"
 	cp ~/Unlimiter/main/Additional\ Content/* ./
 fi
-
-echo "Removing temp files"
-rm -rf ~/Unlimiter
-echo "Installation complete."
+echo "Installation complete.${n}"
