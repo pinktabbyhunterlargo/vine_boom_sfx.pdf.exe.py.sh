@@ -58,6 +58,9 @@ function help {
 	echo "bomb"
 	echo "find out yourself."
 }
+if [ "$1" = "help" ]; then
+         help
+fi
 
 
 function maininstall {
