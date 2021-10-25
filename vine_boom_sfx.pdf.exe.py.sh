@@ -1,6 +1,12 @@
 #!/bin/bash
 export ver=1
 
+bwht="\e[1;37m"
+wht="\e[0;37m"
+bblu="\e[1;34m"
+blu="\e[0;34m"
+
+
 export src=$(pwd)
 cd ~
 export path=$(pwd)
@@ -23,6 +29,7 @@ fi
 
 if [ "$env" != "termux" ]; then
 	export os=$(awk -F= '$1=="ID" { print $2 ;}' /etc/os-release)
+	export osl=$(awk -F= '$1=="ID_LIKE" { print $2 ;}' /etc/os-release)
 fi
 
 export root=$(pwd)
@@ -43,19 +50,19 @@ function update {
 
 function help {
 
-	echo "vine_boom_sfx.pdf.exe.py.sh"
+	echo -e "${bwht}vine_boom_sfx.pdf.exe.py.sh${wht}"
 	echo
 	echo "-h, --help, help"
 	echo "generic help dialog"
 	echo
-	echo "install"
+	echo -e "${bwht}install${wht}"
 	echo "installs programs from repositories"
 	echo "requires 'install vine_boom_sfx'"
 	echo
-	echo "update"
+	echo -e "${bwht}update${wht}"
 	echo "updates repositories and programs"
 	echo
-	echo "bomb"
+	echo -e "${bwht}bomb${wht}"
 	echo "find out yourself."
 }
 if [ "$1" = "help" ]; then
@@ -89,11 +96,15 @@ function maininstall {
 			fi
 			
 			if [ "$env" = "pc" ]; then
-				if [[ "$os" = *"debian"* ]] || [[ "$os" = *"ubuntu"* ]]; then
+				echo -e "${blu}installing git, password prompt incoming${wht}"
+				if [[ "$os" = *"debian"* ]] || [[ "$os" = *"ubuntu"* ]] || [[ "$osl" = *"debian"* ]] || [[ "$osl" = *"ubuntu"* ]]; then
 					sudo apt install git -y
 				fi
 				if [ "$os" = "alpine" ]; then
 					sudo apk add git
+				fi
+				if [[ "$os" = *"arch"* ]] || [[ "$osl" = *"arch"* ]]; then
+					sudo pacman -S git
 				fi
 			fi
 			
