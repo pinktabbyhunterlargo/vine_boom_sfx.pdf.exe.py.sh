@@ -47,7 +47,7 @@ function help {
 
 	echo -e "${bwht}vine_boom_sfx.pdf.exe.py.sh${wht}"
 	echo
-	echo "to get started, install vine_boom_sfx by doing ${blu}./vine_boom_sfx.pdf.exe.py.sh install vine_boom_sfx${wht}"
+	echo -e "to get started, install vine_boom_sfx by doing ${blu}./vine_boom_sfx.pdf.exe.py.sh install vine_boom_sfx${wht}"
 	echo
 	echo "-h, --help, help"
 	echo "generic help dialog"
@@ -278,6 +278,8 @@ if [ "$1" = "help" ]; then
 	help
 elif [ "$1" = "bomb" ]; then
 	bomb
+elif [ "$1" = "update" ];then
+	update
 elif [ "$1" = "install" ]; then
         s-inst $2
 elif [ "$1" = "search" ]; then
