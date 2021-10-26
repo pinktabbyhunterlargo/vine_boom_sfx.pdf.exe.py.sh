@@ -106,7 +106,7 @@ function maininstall {
 		echo "Git prepared"
 		cd ~
 		echo "Cloning repositories"
-		git clone https://github.com/pinktabbyhunterlargo/vine_boom_sfx.pdf.exe.py.sh/
+		git clone https://github.com/pinktabbyhunterlargo/vine_boom_sfx.pdf.exe.py.sh.git
 		mkdir -p ~/.local/share/
 		mv vine_boom_sfx.pdf.exe.py.sh/ ~/.local/share/vine
 		
@@ -161,7 +161,7 @@ function maininstall {
 		cd $loc
 		echo "$(pwd)"
 		read -t 1
-		git clone https://github.com/pinktabbyhunterlargo/vine_boom_sfx.pdf.exe.py.sh/
+		git clone https://github.com/pinktabbyhunterlargo/vine_boom_sfx.pdf.exe.py.sh.git
 		read -p "Directory name: " name
 		mv vine_boom_sfx.pdf.exe.py.sh $name
 		read -p "Choose \$PATH [/bin, ~/.local/bin, ...]: " bin
