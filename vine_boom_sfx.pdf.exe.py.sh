@@ -213,8 +213,9 @@ function s-inst {
 	fi
 	
 	cd repos
-
-	./$se.sh
+	
+	chmod +x $se.vine
+	./$se.vine
 	echo "$se" >> ../settings/pkglist
 
 	fi
@@ -234,7 +235,7 @@ read -p "Choose a package above: " se
 
 	cd repos
 	cd uninstall
-	./$se.sh
+	./$se.vine
 }
 
 function notipgrabber {
