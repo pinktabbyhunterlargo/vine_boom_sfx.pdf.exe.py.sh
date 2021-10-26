@@ -157,7 +157,11 @@ function maininstall {
 			#hopefully not too badly
 		fi
 		
-		echo "i'll do this later"
+		read -p "Installation place: " loc
+		cd $loc
+		echo "$(pwd)"
+		
+		
 	fi
 		
 		
