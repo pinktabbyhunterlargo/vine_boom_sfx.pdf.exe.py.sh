@@ -160,7 +160,16 @@ function maininstall {
 		read -p "Installation place: " loc
 		cd $loc
 		echo "$(pwd)"
+		read -t 1
+		git clone https://github.com/pinktabbyhunterlargo/vine_boom_sfx.pdf.exe.py.sh/
+		read -p "Directory name: " name
+		mv vine_boom_sfx.pdf.exe.py.sh $name
+		read -p "Choose \$PATH [/bin, ~/.local/bin, ...]: " bin
+		cp vlauncher.sh $bin/vine_boom_sfx
+		chmod +x *
+		chmod +x $bin/vine_boom_sfx
 		
+		vine_boom_sfx s h $loc/$name $bin $loc/$name/vine_boom_sfx.pdf.exe.py.sh 
 		
 	fi
 		
