@@ -1,12 +1,10 @@
 #!/bin/bash
 # vine_boom_sfx for .local/bin
-if [ "$(cat ~/.vls)" = "" ]
-then
+if [ "$(cat ~/.vls)" = "" ]; then
 	echo "vlauncher version 1"
 fi
 
-if [ "$1" = "s" ]
-then
+if [ "$1" = "s" ]; then
 	# setup vlauncher and vine_boom_sfx
 	if [ "$2" = "h" ]
 	then
@@ -23,6 +21,8 @@ then
 		
 	fi
 	
+elif [ "$1" = "-x" ]; then
+	echo "ping"
 else
 		
 	cd $(cat ~/.vls)
