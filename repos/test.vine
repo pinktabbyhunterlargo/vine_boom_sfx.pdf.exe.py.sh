@@ -1,2 +1,3 @@
+#!/bin/bash
 #base installer file
 #echo "test 1" >> ~/.local/share/vine/settings/pkgver
