@@ -55,6 +55,9 @@ function help {
 	echo -e "${bwht}update${wht}"
 	echo "updates repositories and programs"
 	echo
+	echo -e "${bwht}e05${wht}"
+	echo "e05 momen"
+	echo 
 	echo -e "${bwht}bomb${wht}"
 	echo "find out yourself."
 }
@@ -128,7 +131,6 @@ function maininstall {
 	elif [ "$itype" = "g" ]; then
 		read -p "Should git be installed/updated? [y/n]" -n 1 git
 		
-		
 		if [ "$git" = "y" ]; then
 		
 			#ctrl c ctrl v time
@@ -165,14 +167,9 @@ function maininstall {
 		chmod +x *
 		chmod +x $bin/vine_boom_sfx
 		
-		vine_boom_sfx s h $loc/$name $bin $loc/$name/vine_boom_sfx.pdf.exe.py.sh 
-		
+		vine_boom_sfx s h $loc/$name $bin $loc/$name/vine_boom_sfx.pdf.exe.py.sh 	
 	fi
-		
-		
-
 }
-
 
 function bomb {
 	f
@@ -188,9 +185,7 @@ function search {
 	
 	cat $ls | grep $se
 	echo "$rs results found"
-
 }
-
 
 function s-inst {
 
@@ -284,6 +279,18 @@ echo "vine_boom_sfx updated"
 function pkgupdate {
 	echo "'ö'"
 }
+
+function e05 {
+	ytdlp="cat ~/.local/share/vine/settings/pkglist | grep yt-dlp"
+	if [ "$ytdlp" = "" ]; then
+		echo -e "${bblu}installing yt-dlp (password prompt incoming)${wht}"
+		sh ~/.local/bin/vine_boom_sfx install yt-dlp
+	fi
+	echo -e "${bblu}use 9 to reduce the volume when it plays${wht}"
+	yt-dlp -o /tmp --extract-audio "https://www.youtube.com/watch?v=AFxhiVYyQEA"
+	ffplay -autoexit -volume 60 -vn /tmp/Turning\ Point*
+}
+
 #the actual execution of the functions
 #put new functions before these comments
 
@@ -301,4 +308,6 @@ elif [ "$1" = "uninstall" ]; then
 	uninstall $2
 elif [ "$1" = "ipgrab" ]; then
 	notipgrabber
+elif [ "$1" = "e05" ]; then
+	e05
 fi

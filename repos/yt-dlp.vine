@@ -1,0 +1,9 @@
+#!bin/bash
+br="\e[1;31m"
+r="\e[0;31m"
+wht="\e[0;37m"
+echo -e "${br}installing yt-dlp (password prompt incoming)${r}" #gonna add local installation option later
+sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+sudo chmod a+rx /usr/local/bin/yt-dlp
+echo "ytdlp 1" >> ~/.local/share/vine/settings/pkgver
+echo -e "${br}installation complete${wht}"
