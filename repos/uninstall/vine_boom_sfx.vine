@@ -1,3 +1,4 @@
+#!/bin/bash
 export root=$(cat ~/.vls)
 cd $root
 
