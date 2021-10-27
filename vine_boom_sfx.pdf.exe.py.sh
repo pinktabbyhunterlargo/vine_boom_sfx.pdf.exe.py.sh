@@ -38,10 +38,6 @@ cd $root
 # it's function time!
 #yaaaaayyyy.....
 
-function update {
-	echo "no update available"
-}
-
 
 function help {
 
@@ -285,6 +281,9 @@ rm -rf tmp
 echo "vine_boom_sfx updated"
 }
 
+function pkgupdate {
+	echo "'ö'"
+}
 #the actual execution of the functions
 #put new functions before these comments
 
@@ -293,7 +292,7 @@ if [ "$1" = "help" ]; then
 elif [ "$1" = "bomb" ]; then
 	bomb
 elif [ "$1" = "update" ];then
-	mainupdate && update
+	mainupdate && pkgupdate
 elif [ "$1" = "install" ]; then
         s-inst $2
 elif [ "$1" = "search" ]; then
