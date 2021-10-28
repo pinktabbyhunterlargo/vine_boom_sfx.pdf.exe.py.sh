@@ -38,7 +38,6 @@ cd $root
 # it's function time!
 #yaaaaayyyy.....
 
-
 function help {
 
 	echo -e "${bwht}vine_boom_sfx.pdf.exe.py.sh${wht}"
@@ -67,26 +66,19 @@ function maininstall {
 	echo
 	echo "But first, a few questions."
 	read -p "Install type [A uto, G uided, C ustom]: " itype
-	
 	if [ "$itype" = "a" ]; then
 		read -p "Checking for git (any key to pause)" -t 3 git -n 1
-		
 		if [ "$git" != "" ]; then
 			echo "Waiting, any key to continue"
 			read -n 1
 		fi
-		
 		#check for git
-		
 		export git=$(ls $PATH | grep git)
 		if [ "$git" = "" ]; then
-	
 			export git=0
-			
 			if [ "$env" = "termux" ]; then
 				apt install git -y
 			fi
-			
 			if [ "$env" = "pc" ]; then
 				echo -e "${blu}installing git, password prompt incoming${wht}"
 				if [[ "$os" = *"debian"* ]] || [[ "$os" = *"ubuntu"* ]] || [[ "$osl" = *"debian"* ]] || [[ "$osl" = *"ubuntu"* ]]; then
@@ -99,7 +91,6 @@ function maininstall {
 					sudo pacman -S git
 				fi
 			fi
-			
 		fi
 		
 		echo "Git prepared"
@@ -108,7 +99,6 @@ function maininstall {
 		git clone https://github.com/pinktabbyhunterlargo/vine_boom_sfx.pdf.exe.py.sh.git
 		mkdir -p ~/.local/share/
 		mv vine_boom_sfx.pdf.exe.py.sh/ ~/.local/share/vine
-		
 		echo "Installing"
 		mkdir -p ~/.local/bin
 		cd ~/.local/bin
@@ -120,24 +110,18 @@ function maininstall {
 		chmod +x *
 		cd uninstall
 		chmod +x *
-		
 		echo "Testing"
 		vine_boom_sfx s h ~/.local/share/vine ~/.local/bin ~/.local/share/vine/vine_boom_sfx.pdf.exe.py.sh 
 		vine_boom_sfx install test
 		vine_boom_sfx update ~/.local/share/vine/tmp/
 		vine_boom_sfx log
-		
-		
 	elif [ "$itype" = "g" ]; then
 		read -p "Should git be installed/updated? [y/n]" -n 1 git
-		
 		if [ "$git" = "y" ]; then
-		
 			#ctrl c ctrl v time
 			if [ "$env" = "termux" ]; then
 				apt install git -y
 			fi
-			
 			if [ "$env" = "pc" ]; then
 				echo -e "${blu}installing git, password prompt incoming${wht}"
 				if [[ "$os" = *"debian"* ]] || [[ "$os" = *"ubuntu"* ]] || [[ "$osl" = *"debian"* ]] || [[ "$osl" = *"ubuntu"* ]]; then
@@ -149,12 +133,10 @@ function maininstall {
 				if [[ "$os" = *"arch"* ]] || [[ "$osl" = *"arch"* ]]; then
 					sudo pacman -S git
 				fi
-			fi
-			
+			fi	
 			#how badly will this work
 			#hopefully not too badly
 		fi
-		
 		read -p "Installation place: " loc
 		cd $loc
 		echo "$(pwd)"
@@ -166,7 +148,6 @@ function maininstall {
 		cp vlauncher.sh $bin/vine_boom_sfx
 		chmod +x *
 		chmod +x $bin/vine_boom_sfx
-		
 		vine_boom_sfx s h $loc/$name $bin $loc/$name/vine_boom_sfx.pdf.exe.py.sh 	
 	fi
 }
@@ -181,34 +162,26 @@ function bomb {
 function search {
 	export se=$2
 	export rs=$(cat $ls | grep -c $se)
-	
-	
 	cat $ls | grep $se
 	echo "$rs results found"
 }
 
 function s-inst {
-
 	if [ "$1" = "vine_boom_sfx" ]; then
 		maininstall
 	else
 		echo "$1 $2"
-
 	search
-	
 	if (( $rs > 1 )); then
 		echo "There are multiple packages."
 		echo "Choose a package of following:"
 		cat $ls | grep $se
 		read -p "[name]: " se 
 	fi
-	
 	cd repos
-	
 	chmod +x $se.vine
 	./$se.vine
 	echo "$se" >> ../settings/pkglist
-
 	fi
 
 }
@@ -286,7 +259,6 @@ function e05 {
 		echo -e "${bblu}installing yt-dlp (password prompt incoming)${wht}"
 		sh ~/.local/bin/vine_boom_sfx install yt-dlp
 	fi
-	echo -e "${bblu}use 9 to reduce the volume when it plays${wht}"
 	yt-dlp -o /tmp --extract-audio "https://www.youtube.com/watch?v=AFxhiVYyQEA"
 	ffplay -autoexit -volume 60 -vn /tmp/Turning\ Point*
 }
