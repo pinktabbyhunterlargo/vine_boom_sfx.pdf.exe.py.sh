@@ -1,5 +1,5 @@
 #!/bin/bash
-git clone https://github.com/pinktabbyhunterlargo/vbs-desktop/
+git clone https://github.com/pinktabbyhunterlargo/vbs-desktop.git
 cd vbs-desktop
 chmod +x setup
 read -p "Which usr? [/usr, ~/.local]: " usr
