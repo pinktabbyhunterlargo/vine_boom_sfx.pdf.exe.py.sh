@@ -1,9 +1,31 @@
 #!bin/bash
+export un=$(uname -o)
 br="\e[1;31m"
 r="\e[0;31m"
 wht="\e[0;37m"
-echo -e "${br}installing yt-dlp (password prompt incoming)${r}" #gonna add local installation option later
-sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
-sudo chmod a+rx /usr/local/bin/yt-dlp
-echo "ytdlp 1" >> ~/.local/share/vine/settings/pkgver
-echo -e "${br}installation complete${wht}"
+function localins {
+	echo -e "${br}installing yt-dlp locally${r}"
+	curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o ~/.local/bin/yt-dlp
+	chmod a+rx ~/.local/bin/yt-dlp
+	echo "ytdlp 1" >> ~/.local/share/vine/settings/pkgver
+	echo -e "${br}installation complete${wht}"
+}
+function sysins {
+	echo -e "${br}installing yt-dlp systemwide (password prompt incoming)${r}"
+	sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+	sudo chmod a+rx /usr/local/bin/yt-dlp
+	echo "ytdlp 1" >> ~/.local/share/vine/settings/pkgver
+	echo -e "${br}installation complete${wht}"
+}
+if [ "$un" = "Android" ]; then
+	echo -e "${br}since you are on android, script will now install yt-dlp locally${wht}"
+	localins
+else
+	echo -e "${br}install locally or system wide?${r}"
+	read -p "local [L], system [S]" insloc
+	if [[ $insloc = *"S"* ]] || [[ $insloc = *"s"* ]];then
+		sysins
+	else
+		localins
+	fi
+fi
