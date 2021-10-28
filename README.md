@@ -6,4 +6,8 @@ Multi purpose bash script for... something?
 
 Includes a package manager and functions of one
 
-what was i writing here
+depenencies
+```
+ffmpeg
+thats all really
+```
