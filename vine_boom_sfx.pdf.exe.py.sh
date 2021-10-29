@@ -1,5 +1,4 @@
 #!/bin/bash
-export ver=1
 
 bwht="\e[1;37m"
 wht="\e[0;37m"
@@ -149,6 +148,12 @@ function maininstall {
 		chmod +x *
 		chmod +x $bin/vine_boom_sfx
 		vine_boom_sfx s h $loc/$name $bin $loc/$name/vine_boom_sfx.pdf.exe.py.sh 	
+		export vbsd=$(vine_boom_sfx -x)
+		if [ "$vbsd" = "ping" ]; then
+			echo "vlauncher installed"
+		else
+			echo "vlauncher failed"
+		fi
 	fi
 }
 
