@@ -1,6 +1,6 @@
 #!/bin/bash
-git clone https://github.com/pinktabbyhunterlargo/vbs-desktop.git
-cd vbs-desktop
+wget https://raw.githubusercontent.com/pinktabbyhunterlargo/vbs-desktop/main/setup 
 chmod +x setup
 read -p "Which usr? [/usr, ~/.local]: " usr
 ./setup $usr
+rm setup
