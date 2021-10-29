@@ -9,5 +9,6 @@ Includes a package manager and functions of one
 depenencies
 ```
 ffmpeg
-thats all really
+wget
+internet connection probably
 ```
