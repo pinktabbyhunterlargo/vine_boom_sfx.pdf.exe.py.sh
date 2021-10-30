@@ -264,8 +264,8 @@ function e05 {
 		echo -e "${bblu}installing yt-dlp (password prompt incoming)${wht}"
 		sh ~/.local/bin/vine_boom_sfx install yt-dlp
 	fi
-	yt-dlp -o /tmp --extract-audio "https://www.youtube.com/watch?v=AFxhiVYyQEA"
-	ffplay -autoexit -volume 60 -vn /tmp/Turning\ Point*
+	yt-dlp -o /tmp/e05.opus --extract-audio "https://youtu.be/A44IL09bxd8"
+	ffplay -autoexit -volume 60 -vn /tmp/e05.*
 }
 
 #the actual execution of the functions
