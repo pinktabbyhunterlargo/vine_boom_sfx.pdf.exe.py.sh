@@ -1,0 +1,189 @@
+
+(budgie-panel:1290): Gtk-WARNING **: 14:54:39.804: for_size smaller than min-size (34 < 36) while measuring gadget (node box, owner BudgieHeaderWidget)
+
+(budgie-panel:1290): Gtk-WARNING **: 14:54:39.805: for_size smaller than min-size (34 < 36) while measuring gadget (node box, owner BudgieHeaderWidget)
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[Child 2226, MediaDecoderStateMachine #1] WARNING: 7f8a90ef5200 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #1] WARNING: 7f8a8e5a0c40 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #1] WARNING: 7f8a90d60980 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #2] WARNING: 7f8a8e691d40 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #2] WARNING: 7f8a8e431970 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #2] WARNING: 7f8a8e5dd010 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #2] WARNING: 7f8a880aa2e0 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #3] WARNING: 7f8a8e669a70 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #3] WARNING: 7f8a912a0100 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #3] WARNING: 7f8a8dc54f10 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #3] WARNING: 7f8a88075f20 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #4] WARNING: 7f8a88075e30 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #4] WARNING: 7f8a8fdd9110 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #4] WARNING: 7f8a8fd36f10 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #4] WARNING: 7f8a901636a0 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #4] WARNING: 7f8a859cc1f0 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #4] WARNING: 7f8a880a96b0 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+Discord 0.0.16
+Quitting secondary instance.
+[Child 2226, MediaDecoderStateMachine #4] WARNING: 7f8a87fedc40 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #5] WARNING: 7f8a901cdf20 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #5] WARNING: 7f8a90d602f0 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #5] WARNING: 7f8a91d82b60 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PMessagePort::Msg_PostMessages Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+
+** (nemo:6200): WARNING **: 15:30:41.303: Current gtk theme is not known to have nemo support (Qogir-ubuntu-win-dark) - checking...
+[Child 2226, MediaDecoderStateMachine #8] WARNING: 7f8a880763d0 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #8] WARNING: 7f8a8e5dd010 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #8] WARNING: 7f8a87fedd30 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #12] WARNING: 7f8a8532e110 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #12] WARNING: 7f8a91d983d0 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #12] WARNING: 7f8a8e5dce30 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #12] WARNING: 7f8a8eec3200 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #12] WARNING: 7f8a8e66a4c0 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #12] WARNING: 7f8a8fd36e20 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #12] WARNING: 7f8a8fd356b0 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #13] WARNING: 7f8a85c0bf10 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #13] WARNING: 7f8a880754d0 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #13] WARNING: 7f8a85366790 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #13] WARNING: 7f8a85366790 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #13] WARNING: 7f8a8fd35200 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #13] WARNING: 7f8a901c4100 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #13] WARNING: 7f8a91d415c0 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #13] WARNING: 7f8a849cf3d0 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #13] WARNING: 7f8a88075020 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #13] WARNING: 7f8a85365a70 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #13] WARNING: 7f8a87ff55b0 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #13] WARNING: 7f8a8e5be980 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+[Child 2226, MediaDecoderStateMachine #14] WARNING: 7f8a8fd36c40 Could not set cubeb stream name.: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/dom/media/AudioStream.cpp:367
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[Parent 2130, IPC I/O Parent] WARNING: FileDescriptorSet destroyed with unconsumed descriptors: file /var/tmp/portage/www-client/firefox-93.0/work/firefox-93.0/ipc/chromium/src/chrome/common/file_descriptor_set_posix.cc:19
+Discord 0.0.16
+Starting app.
+Starting updater.
+[Modules] Modules initializing
+[Modules] Distribution: remote
+[Modules] Host updates: enabled
+[Modules] Module updates: enabled
+[Modules] Module install path: /home/rangeramg/.config/discord/0.0.16/modules
+[Modules] Module installed file path: /home/rangeramg/.config/discord/0.0.16/modules/installed.json
+[Modules] Module download path: /home/rangeramg/.config/discord/0.0.16/modules/pending
+[Modules] No updates to install
+[Modules] Checking for host updates.
+[Modules] Host is up to date.
+[Modules] Checking for module updates at https://discord.com/api/modules/stable/versions.json
+[Modules] No module updates available.
+
+** (budgie-panel:1290): WARNING **: 17:38:11.644: Encountered X error 1 when setting background for tray icon
+[2021-10-30 17:38:15.832] [3396] (audio_device_generic.cc:67): SetRecordingDevice: Not supported on this platform
+[2021-10-30 17:38:15.833] [3396] (audio_device_generic.cc:62): SetPlayoutDevice: Not supported on this platform
+[2021-10-30 17:38:16.115] [3396] (audio_device_generic.cc:67): SetRecordingDevice: Not supported on this platform
+[2021-10-30 17:38:16.117] [3396] (audio_device_generic.cc:62): SetPlayoutDevice: Not supported on this platform
+
+(budgie-panel:1290): Gtk-WARNING **: 17:46:33.860: for_size smaller than min-size (34 < 36) while measuring gadget (node box, owner BudgieHeaderWidget)
+
+(budgie-panel:1290): GLib-CRITICAL **: 17:46:36.123: g_hash_table_foreach: assertion 'version == hash_table->version' failed
+
+(budgie-panel:1290): GLib-CRITICAL **: 17:46:37.364: g_hash_table_foreach: assertion 'version == hash_table->version' failed
+Discord 0.0.16
+Starting app.
+Starting updater.
+[Modules] Modules initializing
+[Modules] Distribution: remote
+[Modules] Host updates: enabled
+[Modules] Module updates: enabled
+[Modules] Module install path: /home/rangeramg/.config/discord/0.0.16/modules
+[Modules] Module installed file path: /home/rangeramg/.config/discord/0.0.16/modules/installed.json
+[Modules] Module download path: /home/rangeramg/.config/discord/0.0.16/modules/pending
+[Modules] No updates to install
+[Modules] Checking for host updates.
+[Modules] Host is up to date.
+[Modules] Checking for module updates at https://discord.com/api/modules/stable/versions.json
+[Modules] No module updates available.
+
+** (budgie-panel:1290): WARNING **: 17:46:47.965: Encountered X error 1 when setting background for tray icon
+[2021-10-30 17:46:48.501] [5929] (audio_device_generic.cc:67): SetRecordingDevice: Not supported on this platform
+[2021-10-30 17:46:48.502] [5929] (audio_device_generic.cc:62): SetPlayoutDevice: Not supported on this platform
+[2021-10-30 17:46:48.586] [5929] (audio_device_generic.cc:67): SetRecordingDevice: Not supported on this platform
+[2021-10-30 17:46:48.587] [5929] (audio_device_generic.cc:62): SetPlayoutDevice: Not supported on this platform
+
+** (nemo:8092): WARNING **: 17:51:44.481: Current gtk theme is not known to have nemo support (Qogir-ubuntu-win-dark) - checking...
+[2021-10-30 17:55:55.404] [5935] (audio_device_pulse_linux.cc:1861): Can't query latency
+[2021-10-30 17:55:55.405] [5935] (audio_device_pulse_linux.cc:1861): Can't query latency
+[2021-10-30 17:55:55.405] [5935] (audio_device_pulse_linux.cc:1861): Can't query latency
+
+(nemo:8092): Gtk-CRITICAL **: 18:01:10.620: gtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x220005,name=PBroadcastChannel::Msg___delete__) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[2021-10-30 18:06:15.324] [13292] (audio_device_generic.cc:67): SetRecordingDevice: Not supported on this platform
+[2021-10-30 18:06:15.326] [13292] (audio_device_generic.cc:62): SetPlayoutDevice: Not supported on this platform
+[2021-10-30 18:06:15.537] [13292] (audio_device_generic.cc:67): SetRecordingDevice: Not supported on this platform
+[2021-10-30 18:06:15.539] [13292] (audio_device_generic.cc:62): SetPlayoutDevice: Not supported on this platform
+[2021-10-30 18:06:29.896] [13298] (audio_device_pulse_linux.cc:1861): Can't query latency
+[14900:14900:1030/170730.893893:ERROR:sandbox_linux.cc(374)] InitializeSandbox() called with multiple threads in process gpu-process.
+[14862:14916:1030/170731.638431:ERROR:ev_root_ca_metadata.cc(841)] Failed to register OID: 0
+[14862:14916:1030/170734.047287:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+[14862:14916:1030/170734.047354:ERROR:chrome_browser_main_extra_parts_metrics.cc(233)] crbug.com/1216328: Checking Bluetooth availability ended.
+[14862:14916:1030/170734.047359:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+[14862:14916:1030/170734.177665:ERROR:chrome_browser_main_extra_parts_metrics.cc(240)] crbug.com/1216328: Checking default browser status ended.
+ALSA lib /var/tmp/portage/media-libs/alsa-lib-1.2.5.1/work/alsa-lib-1.2.5.1/src/control/control.c:1481:(snd_ctl_open_noupdate) Invalid CTL CARD=Generic_1
+[15218:15218:1030/171039.519400:ERROR:alsa_util.cc(309)] MixerAttach, CARD=Generic_1, No such file or directory
+ALSA lib /var/tmp/portage/media-libs/alsa-lib-1.2.5.1/work/alsa-lib-1.2.5.1/src/pcm/pcm_dsnoop.c:600:(snd_pcm_dsnoop_open) unable to open slave
+[15218:15218:1030/171051.647657:ERROR:alsa_util.cc(204)] PcmOpen: sysdefault:CARD=C1U,Device or resource busy
+ALSA lib /var/tmp/portage/media-libs/alsa-lib-1.2.5.1/work/alsa-lib-1.2.5.1/src/pcm/pcm_dsnoop.c:600:(snd_pcm_dsnoop_open) unable to open slave
+[15218:15218:1030/171051.751808:ERROR:alsa_util.cc(204)] PcmOpen: sysdefault:CARD=C1U,Device or resource busy
+ALSA lib /var/tmp/portage/media-libs/alsa-lib-1.2.5.1/work/alsa-lib-1.2.5.1/src/control/control.c:1481:(snd_ctl_open_noupdate) Invalid CTL CARD=C1U
+[15218:15218:1030/171124.404479:ERROR:alsa_util.cc(309)] MixerAttach, CARD=C1U, No such file or directory
+ALSA lib /var/tmp/portage/media-libs/alsa-lib-1.2.5.1/work/alsa-lib-1.2.5.1/src/control/control.c:1481:(snd_ctl_open_noupdate) Invalid CTL CARD=C1U
+[15218:15218:1030/171155.576669:ERROR:alsa_util.cc(309)] MixerAttach, CARD=C1U, No such file or directory
+ALSA lib /var/tmp/portage/media-libs/alsa-lib-1.2.5.1/work/alsa-lib-1.2.5.1/src/control/control.c:1481:(snd_ctl_open_noupdate) Invalid CTL CARD=Generic_1
+[15218:15218:1030/171156.022915:ERROR:alsa_util.cc(309)] MixerAttach, CARD=Generic_1, No such file or directory
+ALSA lib /var/tmp/portage/media-libs/alsa-lib-1.2.5.1/work/alsa-lib-1.2.5.1/src/control/control.c:1481:(snd_ctl_open_noupdate) Invalid CTL CARD=Generic_1
+[15218:15218:1030/171209.577027:ERROR:alsa_util.cc(309)] MixerAttach, CARD=Generic_1, No such file or directory
+libpng warning: iCCP: known incorrect sRGB profile
+[OpenH264] this = 0x0x3eee09a357d0, Warning:ParamValidationExt(), eSpsPpsIdStrategy setting (2) with iUsageType (1) not supported! eSpsPpsIdStrategy adjusted to CONSTANT_ID
+[OpenH264] this = 0x0x3eee09a357d0, Warning:ParamValidation(), AdaptiveQuant(1) is not supported yet for screen content, auto turned off
+[OpenH264] this = 0x0x3eee09a357d0, Warning:ParamValidation(), BackgroundDetection(1) is not supported yet for screen content, auto turned off
+[OpenH264] this = 0x0x3eee09a357d0, Warning:bEnableFrameSkip = 0,bitrate can't be controlled for RC_QUALITY_MODE,RC_BITRATE_MODE and RC_TIMESTAMP_MODE without enabling skip frame.
+[OpenH264] this = 0x0x3eee09a357d0, Warning:Change QP Range from(0,51) to (26,35)
+[OpenH264] this = 0x0x3eee09a34c00, Warning:ParamValidationExt(), eSpsPpsIdStrategy setting (2) with iUsageType (1) not supported! eSpsPpsIdStrategy adjusted to CONSTANT_ID
+[OpenH264] this = 0x0x3eee09a34c00, Warning:ParamValidation(), AdaptiveQuant(1) is not supported yet for screen content, auto turned off
+[OpenH264] this = 0x0x3eee09a34c00, Warning:ParamValidation(), BackgroundDetection(1) is not supported yet for screen content, auto turned off
+[OpenH264] this = 0x0x3eee09a34c00, Warning:bEnableFrameSkip = 0,bitrate can't be controlled for RC_QUALITY_MODE,RC_BITRATE_MODE and RC_TIMESTAMP_MODE without enabling skip frame.
+[OpenH264] this = 0x0x3eee09a34c00, Warning:Change QP Range from(0,51) to (26,35)
+[OpenH264] this = 0x0x3eee09a34c00, Warning:Actual input framerate 0.000000 is different from framerate in setting 22.000000, suggest to use other rate control modes
+[OpenH264] this = 0x0x3eee09a34c00, Warning:Actual input framerate 22.527912 is different from framerate in setting 29.000000, suggest to use other rate control modes
+[OpenH264] this = 0x0x3eee09a34c00, Warning:Actual input framerate 8.658009 is different from framerate in setting 3.000000, suggest to use other rate control modes
+[15169:29:1030/173055.804523:ERROR:call.cc(1568)] receive_rtp_config_ lookup failed for ssrc 55340
+[OpenH264] this = 0x0x3eee09e39b10, Warning:ParamValidationExt(), eSpsPpsIdStrategy setting (2) with iUsageType (1) not supported! eSpsPpsIdStrategy adjusted to CONSTANT_ID
+[OpenH264] this = 0x0x3eee09e39b10, Warning:ParamValidation(), AdaptiveQuant(1) is not supported yet for screen content, auto turned off
+[OpenH264] this = 0x0x3eee09e39b10, Warning:ParamValidation(), BackgroundDetection(1) is not supported yet for screen content, auto turned off
+[OpenH264] this = 0x0x3eee09e39b10, Warning:bEnableFrameSkip = 0,bitrate can't be controlled for RC_QUALITY_MODE,RC_BITRATE_MODE and RC_TIMESTAMP_MODE without enabling skip frame.
+[OpenH264] this = 0x0x3eee09e39b10, Warning:Change QP Range from(0,51) to (26,35)
+[OpenH264] this = 0x0x3eee09e39b10, Warning:Actual input framerate 0.000000 is different from framerate in setting 6.000000, suggest to use other rate control modes
+[15169:29:1030/173717.481734:ERROR:webrtc_video_engine.cc(3477)] Absent receive stream; ignoring clearing encoded frame sink for ssrc 0

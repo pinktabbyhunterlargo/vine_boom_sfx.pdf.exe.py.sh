@@ -260,12 +260,15 @@ function pkgupdate {
 
 function e05 {
 	ytdlp="cat ~/.local/share/vine/settings/pkglist | grep yt-dlp"
-	if [ "$ytdlp" = "" ]; then
-		echo -e "${bblu}installing yt-dlp (password prompt incoming)${wht}"
-		sh ~/.local/bin/vine_boom_sfx install yt-dlp
+	strak="ls ~/.local/vine/files/ | grep e05"
+	if [ "$strak" = "" ]
+		if [ "$ytdlp" = "" ]; then
+			echo -e "${bblu}installing yt-dlp${wht}"
+			sh ~/.local/bin/vine_boom_sfx install yt-dlp
+		fi
+		yt-dlp -o ~/.local/vine/files/e05.opus --extract-audio "https://youtu.be/A44IL09bxd8"
 	fi
-	yt-dlp -o /tmp/e05.opus --extract-audio "https://youtu.be/A44IL09bxd8"
-	ffplay -autoexit -volume 60 -vn /tmp/e05.*
+	ffplay -autoexit -volume 60 -vn ~/.local/vine/files/e05.opus
 }
 
 #the actual execution of the functions
