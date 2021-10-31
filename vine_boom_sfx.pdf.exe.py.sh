@@ -102,7 +102,7 @@ function maininstall {
 		mkdir -p ~/.local/bin
 		cd ~/.local/bin
 		cp ~/.local/share/vine/vlauncher.sh ~/.local/bin/
-		mv vlauncher.sh vine_boom_sfx
+		mv files/vlauncher.sh vine_boom_sfx
 		chmod +x vine_boom_sfx
 		cd ~/.local/share/vine/repos
 		chmod +x ~/.local/share/vine/vine_boom_sfx.pdf.exe.py.sh
@@ -144,7 +144,7 @@ function maininstall {
 		read -p "Directory name: " name
 		mv vine_boom_sfx.pdf.exe.py.sh $name
 		read -p "Choose \$PATH [/bin, ~/.local/bin, ...]: " bin
-		cp vlauncher.sh $bin/vine_boom_sfx
+		cp files/vlauncher.sh $bin/vine_boom_sfx
 		chmod +x *
 		chmod +x $bin/vine_boom_sfx
 		vine_boom_sfx s h $loc/$name $bin $loc/$name/vine_boom_sfx.pdf.exe.py.sh 	
@@ -244,7 +244,7 @@ mkdir tmp; cd tmp
 git clone https://github.com/pinktabbyhunterlargo/vine_boom_sfx.pdf.exe.py.sh.git
 cd vine_boom_sfx*
 cp -uvr ./* $root
-mv vlauncher.sh vine_boom_sfx
+mv files/vlauncher.sh vine_boom_sfx
 export vlsrc=$(cat $root/settings/base)
 cp -uv vine_boom_sfx $vlsrc
 
