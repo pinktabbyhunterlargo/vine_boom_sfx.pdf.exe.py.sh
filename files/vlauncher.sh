@@ -28,6 +28,6 @@ else
 	cd $(cat ~/.vls)
 	export vbs=$(pwd)
 	
-	./vine_boom_sfx.pdf.exe.py.sh $1 $2 $3 $4
+	./vine_boom_sfx.pdf.exe.py.sh $@
 
 fi
