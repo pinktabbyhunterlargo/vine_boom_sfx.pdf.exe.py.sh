@@ -1,0 +1,18 @@
+#!/bin/bash
+tmpdir="~/.local/vine/tmp/hentaifetch"
+un=$(uname -o)
+bp="\e[1;35m"
+p="\e[0;35m"
+w="\e[0m"
+echo -e "${bp}cloning sources...${p}"
+git clone https://github.com/rangerAMG/hentaifetch.git $tmpdir
+cd $tmpdir
+echo -e "${bp}installing... (password prompt possibly incoming)${p}"
+if [ "$un" = "Android" ]; then
+        make install
+elif
+	sudo make install
+fi
+echo -e "${bp}running hentaifetch${w}"
+hentaifetch 177103
+echo -e "hentaifetch installed"

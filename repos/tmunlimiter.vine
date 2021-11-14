@@ -1,6 +1,6 @@
 #!/bin/bash
 c="\e[1;34m"
-n="\e[0;37m"
+n="\e[0m"
 echo "${c}Making temp directory (~/.local/share/vine/Unlimiter)"
 
 cd ~/.local/share/vine

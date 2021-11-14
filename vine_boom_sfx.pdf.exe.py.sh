@@ -4,6 +4,7 @@ bwht="\e[1;37m"
 wht="\e[0;37m"
 bblu="\e[1;34m"
 blu="\e[0;34m"
+rst="\e[0m"
 
 export src=$(pwd)
 cd ~

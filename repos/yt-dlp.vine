@@ -2,7 +2,7 @@
 export un=$(uname -o)
 br="\e[1;31m"
 r="\e[0;31m"
-wht="\e[0;37m"
+wht="\e[0m"
 function localins {
 	echo -e "${br}installing yt-dlp locally${r}"
 	curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o ~/.local/bin/yt-dlp
