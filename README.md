@@ -10,4 +10,5 @@ depenencies
 ```
 ffmpeg
 git
+curl
 ```
