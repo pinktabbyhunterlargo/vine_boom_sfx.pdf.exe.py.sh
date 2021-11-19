@@ -282,9 +282,8 @@ function hnew {
 	echo -e "$blu Notes on the latest update: \n
 	$wht help new was added, use it for new update info \n 
 	v1 is starting development. Support will continue. \n
-	Use the old package manager with install -l package \n
-	
-	"
+	Use the old package manager with install -l package \n"	
+}
 
 function bpmanage {
 
