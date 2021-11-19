@@ -160,7 +160,7 @@ function maininstall {
 
 function bomb {
 	f
-	a
+	a	
 	adfds[sa[s[f[[[f[as]]]]]]
 	sdfs[[[f[s[fs]d]s]ds]]d]
 }
@@ -272,11 +272,30 @@ function e05 {
 	ffplay -autoexit -volume 60 -nodisp ~/.local/vine/files/e05.opus
 }
 
+function hnew {
+	echo -e "$blu Notes on the latest update: \n
+	$wht help new added, informs on updates \n
+	v1 is starting development. Support will continue. \n
+	Use the old package manager with install -l package \n
+	Soon you will be able to upgrade to v1.# using vine_boom_sfx upgrade. \n
+	This update is highly recommended"
+}
+
+function upgrade {
+	cd $root
+	cd files
+	./upgrade.sh $@
+}
+
 #the actual execution of the functions
 #put new functions before these comments
 
 if [ "$1" = "help" ]; then
-	help
+	if [ "$2" = "new" ]; then
+		hnew
+	else
+		help
+	fi
 elif [ "$1" = "bomb" ]; then
 	bomb
 elif [ "$1" = "update" ];then
@@ -291,4 +310,7 @@ elif [ "$1" = "ipgrab" ]; then
 	notipgrabber
 elif [ "$1" = "e05" ]; then
 	e05
+elif [ "$1" = "upgrade" ]; then
+	export version=0.2b
+	upgrade $root $version
 fi
