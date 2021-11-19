@@ -4,7 +4,6 @@ bwht="\e[1;37m"
 wht="\e[0;37m"
 bblu="\e[1;34m"
 blu="\e[0;34m"
-rst="\e[0m"
 
 export src=$(pwd)
 cd ~
@@ -92,29 +91,34 @@ function maininstall {
 				fi
 			fi
 		fi
+		#git is done
 		
 		echo "Git prepared"
 		cd ~
 		echo "Cloning repositories"
-		git clone https://github.com/pinktabbyhunterlargo/vine_boom_sfx.pdf.exe.py.sh.git
-		mkdir -p ~/.local/share/
-		mv vine_boom_sfx.pdf.exe.py.sh/ ~/.local/share/vine
+		git clone https://github.com/pinktabbyhunterlargo/vine_boom_sfx.pdf.exe.py.sh.git vine_boom_sfx
 		echo "Installing"
-		mkdir -p ~/.local/bin
-		cd ~/.local/bin
-		cp ~/.local/share/vine/vlauncher.sh ~/.local/bin/
-		mv files/vlauncher.sh vine_boom_sfx
-		chmod +x vine_boom_sfx
-		cd ~/.local/share/vine/repos
-		chmod +x ~/.local/share/vine/vine_boom_sfx.pdf.exe.py.sh
-		chmod +x *
-		cd uninstall
-		chmod +x *
-		echo "Testing"
-		vine_boom_sfx s h ~/.local/share/vine ~/.local/bin ~/.local/share/vine/vine_boom_sfx.pdf.exe.py.sh 
-		vine_boom_sfx install test
-		vine_boom_sfx update ~/.local/share/vine/tmp/
-		vine_boom_sfx log
+		
+		mkdir -p .local/share
+		mkdir -p .local/bin
+		#make sure
+		
+		mv vine_boom_sfx .local/share/vine_boom_sfx
+		export $root=~/.local/share/vine_boom_sfx
+		cp $root/files/vlauncher.sh .local/bin/vine_boom_sfx
+		chmod +x .local/bin/vine_boom_sfx $root/vine_boom_sfx.pdf.exe.py.sh
+		mkdir $root/tmp
+		
+		vine_boom_sfx s h $root ~/.local/bin $root/vine_boom_sfx.pdf.exe.py.sh
+		vine_boom_sfx -x
+		if [ "$(vine_boom_sfx -x)" = "ping" ]; then
+			echo "success"
+		else
+			echo "something went wrong"
+		fi
+		
+		
+
 	elif [ "$itype" = "g" ]; then
 		read -p "Should git be installed/updated? [y/n]" -n 1 git
 		if [ "$git" = "y" ]; then
@@ -160,7 +164,7 @@ function maininstall {
 
 function bomb {
 	f
-	a	
+	a
 	adfds[sa[s[f[[[f[as]]]]]]
 	sdfs[[[f[s[fs]d]s]ds]]d]
 }
@@ -229,13 +233,15 @@ function mainupdate {
 
 	if [ "$lsck" = "" ]; then
 echo "vine_boom_sfx is corrupt or not installed."
-read -p "Would you like to install now? [y/N]" fjf
+read -p "Would you like to install now? $blu[y/N]$wht" fjf
 
 if [ "$fjf" = "y" ]; then
 	install vine_boom_sfx
 	echo "Restart script and try again"
 	
 fi
+
+echo "å"
 exit
 	fi
 
@@ -274,11 +280,26 @@ function e05 {
 
 function hnew {
 	echo -e "$blu Notes on the latest update: \n
-	$wht help new added, informs on updates \n
+	$wht help new was added, use it for new update info \n 
 	v1 is starting development. Support will continue. \n
 	Use the old package manager with install -l package \n
-	Soon you will be able to upgrade to v1.# using vine_boom_sfx upgrade. \n
-	This update is highly recommended"
+	
+	"
+
+function bpmanage {
+
+	#so you know the first package manager?
+	#this is better package manager
+
+	export total=$#
+	if (( "$(echo $@ | grep -c "-l")" > 0 )); then
+		$1 $3
+	else
+		files/bpm.py $@
+	
+	fi
+
+# ½
 }
 
 function upgrade {
@@ -291,26 +312,26 @@ function upgrade {
 #put new functions before these comments
 
 if [ "$1" = "help" ]; then
-	if [ "$2" = "new" ]; then
-		hnew
-	else
-		help
-	fi
+		if [ "$2" = "new" ]; then
+			hnew
+		else
+			help
+		fi
 elif [ "$1" = "bomb" ]; then
 	bomb
 elif [ "$1" = "update" ];then
-	mainupdate && pkgupdate
+	mainupdate && pkgupdate $2
 elif [ "$1" = "install" ]; then
-        s-inst $2
+   bpmanage $@
 elif [ "$1" = "search" ]; then
-	search $2
+	search $@
 elif [ "$1" = "uninstall" ]; then
-	uninstall $2
+	bpmanage $@
 elif [ "$1" = "ipgrab" ]; then
 	notipgrabber
 elif [ "$1" = "e05" ]; then
 	e05
 elif [ "$1" = "upgrade" ]; then
-	export version=0.2b
+	export version=1.0.0
 	upgrade $root $version
 fi
