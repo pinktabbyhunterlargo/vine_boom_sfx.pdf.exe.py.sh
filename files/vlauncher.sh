@@ -11,7 +11,6 @@ if [ "$1" = "s" ]; then
 		#setup home
 		
 		cd $3
-		mkdir settings
 		cd settings
 		echo "$4" > base
 		
