@@ -293,9 +293,9 @@ function bpmanage {
 	if [ "$2" = "vine_boom_sfx" ]; then
 		maininstall
 	else
-
+	
 	export total=$#
-	if (( "$(echo $@ | grep -c "-l")" > 0 )); then
+	if (( "$(echo $@ | grep -c \"-l")" > 0 )); then
 		$1 $3
 	else
 		files/bpm.py $@
