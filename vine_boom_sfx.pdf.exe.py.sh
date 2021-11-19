@@ -290,6 +290,10 @@ function bpmanage {
 
 	#so you know the first package manager?
 	#this is better package manager
+	
+	if [ "$2" = "vine_boom_sfx" ]; then
+		maininstall
+	else
 
 	export total=$#
 	if (( "$(echo $@ | grep -c "-l")" > 0 )); then
@@ -298,6 +302,7 @@ function bpmanage {
 		files/bpm.py $@
 	
 	fi
+fi
 
 # ½
 }
