@@ -19,4 +19,5 @@ for i in range(len(inputs)
 	
 	subprocess.run(['bash', '../repos/bpm-call.sh', inputs[i]])
 
+install()
 	
